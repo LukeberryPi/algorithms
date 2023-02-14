@@ -19,10 +19,12 @@ def roman_to_numeral(s: str) -> int:
         }
 
     for i in range(len(s) - 1):
-        if roman[s[i]] < roman[s[i + 1]]:
-            numeral -= roman[s[i]]
+        curr, next = s[i], s[i + 1]
+        
+        if roman[curr] < roman[next]:
+            numeral -= roman[curr]
         else:   
-            numeral += roman[s[i]]
+            numeral += roman[curr]
 
     return numeral + roman[s[-1]]
 
