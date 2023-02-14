@@ -1,3 +1,5 @@
+from typing import List
+
 EXERCISE_LINK = "https://leetcode.com/problems/two-sum/description/"
 
 nums = [2, 3, 5, 7]
@@ -7,7 +9,7 @@ target = 10
 # temos que retornar os índices dos dois valores que somados são iguais ao nosso alvo
 # no exemplo, são os valores 3 e 7, de índices 1 e 3
 
-def two_sum(nums, target):
+def two_sum(nums: List[int], target: int) -> List[int]:
     map = {}
 
     for i, n in enumerate(nums):
@@ -17,6 +19,8 @@ def two_sum(nums, target):
             return [map[diff], i]
         
         map[n] = i
+    
+    return [0, 0]
     
 
 print(two_sum(nums, target))

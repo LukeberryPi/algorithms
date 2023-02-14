@@ -6,7 +6,7 @@ num = 101
 # retornamos se esse número é palíndromo ou não
 # 123 é um palíndromo de 321
 
-def palindrome_number(x):
+def palindrome_number(x: int) -> bool:
     if x < 0 or str(x)[-1] == 0:
         return False
     
