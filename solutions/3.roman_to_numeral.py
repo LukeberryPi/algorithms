@@ -7,34 +7,24 @@ roman = "MCMXCIV"
 # retornar o equivalente em decimal
 
 def roman_to_numeral(s: str) -> int:
-    hashmap = {
-      "I": 1,
-      "IV": 4,
-      "V": 5,
-      "IX": 9,
-      "X": 10,
-      "XL": 40,
-      "L": 50,
-      "XC": 90,
-      "C": 100,
-      "CD": 400,
-      "D": 500,
-      "CM": 900,
-      "M": 1000
-    }
-    
     numeral = 0
-    i = 0
+    roman = {
+        "I": 1,
+        "V": 5,
+        "X": 10,
+        "L": 50,
+        "C": 100,
+        "D": 500,
+        "M": 1000
+        }
 
-    while i < len(s):
-        if i + 1 < len(s) and s[i:i + 2] in hashmap:
-            numeral += hashmap[s[i:i + 2]]
-            i += 2
-        else:
-            numeral += hashmap[s[i]]
-            i += 1
+    for i in range(len(s) - 1):
+        if roman[s[i]] < roman[s[i + 1]]:
+            numeral -= roman[s[i]]
+        else:   
+            numeral += roman[s[i]]
 
-    return numeral
+    return numeral + roman[s[-1]]
 
 
 print(roman_to_numeral(roman))
