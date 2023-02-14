@@ -1,3 +1,5 @@
+EXERCISE_LINK = "https://leetcode.com/problems/two-sum/description/"
+
 nums = [2, 3, 5, 7]
 target = 10
 
@@ -16,6 +18,5 @@ def two_sum(nums, target):
         
         map[n] = i
     
-    return map
 
 print(two_sum(nums, target))
