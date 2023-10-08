@@ -20,6 +20,7 @@ def two_sum(nums: List[int], target: int) -> List[int]:
         
         map[n] = i
     
+    # unreachable return to satisfy type
     return [0, 0]
     
 
