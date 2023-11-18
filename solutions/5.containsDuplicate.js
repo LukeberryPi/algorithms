@@ -1,13 +1,13 @@
-const inputNums: number[] = [1, 2, 3, 4];
+const inputNums = [1, 2, 3, 4];
 
 // return true if the list contains a duplicate
 // false if it doesn't
 
-function lazyContainsDuplicate(nums: number[]): boolean {
+function lazyContainsDuplicate(nums) {
   return nums.length !== new Set(nums).size;
 }
 
-function containsDuplicate(nums: number[]): boolean {
+function containsDuplicate(nums) {
   const map = new Map();
   let result = false;
 
