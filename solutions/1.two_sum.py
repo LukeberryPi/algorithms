@@ -1,6 +1,6 @@
-from typing import List
+# https://leetcode.com/problems/two-sum/description/
 
-EXERCISE_LINK = "https://leetcode.com/problems/two-sum/description/"
+from typing import List
 
 nums = [2, 3, 5, 7]
 target = 10

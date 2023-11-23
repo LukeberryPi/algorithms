@@ -1,6 +1,6 @@
-from typing import List
+# https://leetcode.com/problems/longest-common-prefix/
 
-EXERCISE_LINK = "https://leetcode.com/problems/longest-common-prefix/"
+from typing import List
 
 strs = ["flower", "flow", "flight"]
 

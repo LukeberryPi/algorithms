@@ -1,9 +1,11 @@
-// const inputNums = [1, 2, 3, 1];
-// const inputK = 3;
-// const inputNums = [1, 2, 3, 1, 2, 3];
-// const inputK = 2;
-const inputNums = [0, 1, 2, 3, 4, 0, 0, 7, 8, 9, 10, 11, 12, 0];
-const inputK = 1;
+// https://leetcode.com/problems/contains-duplicate-ii/
+
+const nums = [0, 1, 2, 3, 4, 0, 0, 7, 8, 9, 10, 11, 12, 0];
+const k = 1;
+// const nums = [1, 2, 3, 1];
+// const k = 3;
+// const nums = [1, 2, 3, 1, 2, 3];
+// const k = 2;
 
 // Given an integer array nums and an integer k
 // return true if there are two distinct indices i and j in the array
@@ -21,7 +23,7 @@ function containsDuplicateTwo(nums, k) {
     } else {
       const absoluteDifference = Math.abs(map.get(num) - idx);
       result = absoluteDifference <= k;
-      if (result === true) {
+      if (!!result) {
         return true;
       }
       map.set(num, idx);
@@ -31,4 +33,4 @@ function containsDuplicateTwo(nums, k) {
   return result;
 }
 
-console.log(containsDuplicateTwo(inputNums, inputK));
+console.log(containsDuplicateTwo(nums, k));

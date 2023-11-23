@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/contains-duplicate/
+
 const inputNums = [1, 2, 3, 4];
 
 // return true if the list contains a duplicate
