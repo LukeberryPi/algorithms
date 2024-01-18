@@ -12,5 +12,5 @@ function removeElement(nums, val) {
   return nums.length;
 }
 
-console.log('removeElement(nums, val)', removeElement(nums, val))
 console.log('nums', nums)
+console.log('removeElement(nums, val)', removeElement(nums, val))
