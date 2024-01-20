@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
+
 let nums = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 6, 7, 7];
 let nums1 = [1, 1, 2];
 
