@@ -13,7 +13,7 @@ function sqrt(x) {
 
 console.log(sqrt(x));
 
-// cryptic algorithm implementation that works
+// cryptic algorithm implementation
 // explanation: https://chat.openai.com/share/b4084630-9235-46f8-b6e1-b306239f4edf
 function sqrtBabylonian(x, tolerance = 1e-10) {
   if (x < 0) return NaN; // Square root of a negative number is not a real number
@@ -34,3 +34,29 @@ let number = 1085817232;
 let squareRoot = sqrtBabylonian(number);
 
 console.log(`Square root of ${number} is approximately: ${squareRoot}`);
+
+// smart impl from leetcode submissions, uses binary search
+var mySqrt = function (x) {
+  if (x === 0 || x === 1) {
+    return x;
+  }
+
+  let left = 1;
+  let right = x;
+  let result = 0;
+
+  while (left <= right) {
+    let mid = Math.floor(left + (right - left) / 2);
+
+    if (mid * mid === x) {
+      return mid;
+    } else if (mid * mid < x) {
+      left = mid + 1;
+      result = mid; // Store the potential result
+    } else {
+      right = mid - 1;
+    }
+  }
+
+  return result;
+};
