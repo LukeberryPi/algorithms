@@ -36,7 +36,7 @@ let squareRoot = sqrtBabylonian(number);
 console.log(`Square root of ${number} is approximately: ${squareRoot}`);
 
 // smart impl from leetcode submissions, uses binary search
-var mySqrt = function (x) {
+function sqrt(x) {
   if (x === 0 || x === 1) {
     return x;
   }
@@ -59,4 +59,4 @@ var mySqrt = function (x) {
   }
 
   return result;
-};
+}
