@@ -2,8 +2,7 @@
 
 const x = 1085817232;
 
-// lazy implementation that passes most tests
-// fails because it is too slow
+// lazy implementation that fails on leetcode because it is too slow
 function sqrt(x) {
   if (x < 2) return x;
   const start = Math.floor(x / 2);
