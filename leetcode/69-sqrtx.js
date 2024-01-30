@@ -13,7 +13,7 @@ function sqrt(x) {
 
 console.log(sqrt(x));
 
-// cryptic algorithm implementation
+// cryptic algorithm implementation from chatgpt
 // explanation: https://chat.openai.com/share/b4084630-9235-46f8-b6e1-b306239f4edf
 function sqrtBabylonian(x, tolerance = 1e-10) {
   if (x < 0) return NaN; // Square root of a negative number is not a real number
