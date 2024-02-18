@@ -7,6 +7,7 @@
 // 5 => 1 + 1 + 1 + 1 + 1 / 2 + 1 + 1 + 1 / 1 + 2 + 1 + 1 / 1 + 1 + 2 + 1 / 1 + 1 + 1 + 2 / 2 + 2 + 1 / 2 + 1 + 2 / 1 + 2 + 2 => 8
 
 // sum of the two previous possibilities
+// fibonacci type beat
 // for a new step, you can reach it either by:
 //    taking one step from the previous step
 //    taking two steps from the second to last step 
