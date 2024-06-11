@@ -17,9 +17,9 @@ function multiplyWhile(a, b) {
 
   let result = 0;
 
-  while (b > 0) {
+  while (b !== 0) {
     result += a;
-    b--;
+    b > 0 ? b-- : b++; 
   }
 
   return result;
