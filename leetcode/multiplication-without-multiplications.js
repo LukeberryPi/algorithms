@@ -19,7 +19,7 @@ function multiplyWhile(a, b) {
 
   while (b !== 0) {
     result += a;
-    b > 0 ? b-- : b++; 
+    b > 0 ? b-- : b++; 33
   }
 
   return result;
