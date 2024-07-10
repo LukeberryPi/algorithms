@@ -1,20 +1,32 @@
-# https://leetcode.com/problems/two-sum/description/
+nums = [1, 3, 4, 5, 7]
+target = 9
 
-from typing import List
+# you're given a list of integers nums and a target integer target.
+# return the index of the first two elements a, b in nums such that a + b == target
+# assume there are always two numbers that satisfy this requisite
 
-nums = [2, 3, 5, 7]
-target = 10
+# nums = [4, 6, 8, 10]
+# target = 14
 
-def two_sum(nums: List[int], target: int):
-    map = {}
+# for each number
+# find the difference between the target and that number
+# eg
+# 4 -> diff 5
+# if the diff already exists,
+# store in a hash as num : i
 
-    for i, n in enumerate(nums):
-        diff = target - n
+def two_sum(nums, target):
+    hash = {}
 
-        if diff in map:
-            return [map[diff], i]
-        
-        map[n] = i
-    
+    for i, num in enumerate(nums):
+        diff = target - num
 
-print(two_sum(nums, target))
+        if diff not in hash:
+            hash[num] = i
+
+        if diff in hash:
+            return [hash[diff], i]
+
+    return None
+
+print("result:", two_sum(nums, target))
