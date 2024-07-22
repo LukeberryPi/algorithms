@@ -13,16 +13,8 @@ data = {
 employee_df = pd.DataFrame(data)
 
 def find_managers(employee: pd.DataFrame) -> pd.DataFrame:
-
-    # pandas way
     id_count = employee["managerId"].value_counts()
     employee["count"] = employee["id"].map(id_count).fillna(0).astype(int)
-
-    # my proposition
-    # def get_id_count(df, col):
-    #   return df[col].value_counts()
-
-    # employee["count"].map(get_id_count(employee, "managerId")).fillna(0).astype(int)
 
     return employee.loc[employee["count"] >= 5][["name"]]
 
